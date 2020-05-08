@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col">
+    <div class="row">
+      <div class="col text-center">
+        <span [class.text-danger]="counter <0">{{counter}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button class="btn btn-success" (click)="plus()">plus</button>
+      </div>
+      <div class="col text-center">
+        <button class="btn btn-dark" (click)="reset()" [disabled]="counter ===0">reset</button>
+      </div>
+      <div class="col text-center">
+        <button class="btn btn-primary" (click) = "minus()">minus</button>
+      </div>
+      <div *ngIf="counter < 0">Отрицательное число</div>
+    </div>
+  </div>
+</div>
